@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <div class="navbar">
+      <ul class="navigation"> <!-- nav bar -->
+        <li class="navHome"><a href=#home>Home</a></li>
+        <li class="navContact"><a href="#contact">Contact</a></li>
+        <li class="navPortfolio"><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </div>
+    <link rel="stylesheet" href="mycss.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <script src="script.js" async></script>
+    <div class="textContainer">
+      <h3>Projects:</h3>
+      <a href="https://github.com/nelsonbui923">You may access my completed/ongoing projects here.</a>
+      <h3>Resume:</h3>
+      <a href="https://www.dropbox.com/s/fmaayblryvtbrs7/Resume.cs.pdf?dl=0">You may download my resume here.</a>
+    </div>
+    <section class="preview">
+      <p>Here is a preview</p>
+    </section>
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/78987632_2571816669522560_4197325625456852992_o.jpg?_nc_cat=100&_nc_ohc=w7C1sK_yBXwAQm57TU_0aF9ctckIL77g346ScXRelpVlgBk9ZmSSAVDSg&_nc_ht=scontent-lax3-1.xx&oh=2a7c1f8ca36e2fc94883a93d93e13026&oe=5E7B8039" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/s960x960/79333147_2571829999521227_505540289511817216_o.jpg?_nc_cat=110&_nc_ohc=L6pH5cRLcJgAQnmtuQ2iGt5bmOqxTFoHCR4_RPjvPKFD9B3DPqC77L0nw&_nc_ht=scontent-lax3-1.xx&oh=60fec16566de675d36930dfe288840bd&oe=5E6B0EC1"   style="width:100%">
+      <div class="text2">A fully functional To-Do List website.</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://i.ytimg.com/vi/Pr4zKFXvFcU/hqdefault.jpg" style="width:100%">
+      <div class="text3">Thank you for taking a look at my projects. I hope to continue to produce quality projects in the near future.</div>
+    </div>
+
+  <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+<!-- The dots/circles -->
+  <div style="text-align: center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <div class="navbar">
+      <ul class="navigation"> <!-- nav bar -->
+        <li class="navHome"><a href=#home>Home</a></li>
+        <li class="navContact"><a href="#contact">Contact</a></li>
+        <li class="navPortfolio"><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </div>
+
+    <link rel="stylesheet" href="mycss.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <script src="script.js" async></script>
+    <section>
+      <h2>Leave a message after the submit button!</h2>
+    </section>
+<div class="alignEverything">
+    <section>
+      <h6>Name: </h6>
+      <h6>Email: </h6>
+      <h6>Message: </h6>
+    </section>
+
+
+
+    <section class="alignContent flex">
+    <form name="contactForm" onsubmit="submitMe()">
+
+        <div>
+          <textarea class="name" id="inputName" name="name" placeholder="Your name here.." rows="1" cols="20" required></textarea>
+        </div>
+
+          <div>
+          <textarea class="email" id="inputEmail" name="email" placeholder="Your email here.." rows="1" cols="20" required></textarea>
+        </div>
+
+        <div>
+          <textarea class="message" id="inputMessage" name="message" wrap="off" placeholder="Leave your message!" rows="10" cols="20" required></textarea>
+        </div>
+        <button type="submit" >Submit</button>
+
+    </form>
+    </div>
+  </section>
+
+  </body>
+
+</html>
