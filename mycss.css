@@ -394,3 +394,7 @@ footer img {
   .mySlides img {
     height: 400px;
 }
+  .dot {
+    margin: 300px 2px;
+  }
+}
