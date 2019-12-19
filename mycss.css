@@ -385,7 +385,7 @@ footer img {
   to {opacity: 1}
 }100%
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .message, .name, .email {
     width: 300px;
   }
