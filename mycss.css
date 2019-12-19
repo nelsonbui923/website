@@ -197,8 +197,10 @@ button {
   color: white;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .textContainer a {
@@ -221,6 +223,8 @@ button {
   text-align: center;
   font-size: 30px;
   font-family: Helvetica, sans-serif;
+  font-style: italic;
+  font-stretch: semi-expanded;
 
 
 }
@@ -366,7 +370,7 @@ footer img {
   to {opacity: 1}
 }100%
 
-@media (min-width: 500px) {
+@media (max-width: 500px) {
   .message, .name, .email, button {
     width: 50%;
   }
@@ -374,4 +378,7 @@ footer img {
   .slideshow-container {
     max-width: 700px;
   }
+
+  .mySlides img {
+    height: 400px;
 }
