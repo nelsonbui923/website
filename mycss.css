@@ -7,9 +7,8 @@
 
 html {
   background-image: url("https://lh3.googleusercontent.com/9h6vZcjigz_E6Zh1Hbjpr6NTrsKg5_UX-Pr0nKi2K029nCjIXnVsjFJ3pUk_7isGY76-Cbsmiw=w640-h400-e365");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
-
 }
 
 #intro {
@@ -41,8 +40,9 @@ html {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 18%;
   border-radius: 100%;
+  max-width: 300px;
+  max-height: 500px;
 
 }
 
@@ -57,7 +57,7 @@ html {
   text-align: center;
   border: 1px black;
   background-color: #333;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
 }
@@ -131,55 +131,65 @@ h6 {
 }
 
 .message {
-	border: 5px solid white;
 	padding: 5px;
 	font-family: Tahoma, sans-serif;
-  width: 600px;
-  border-radius: 2px;
+  border-radius: 4px;
+  text-align: inherit;
+  border: 1px solid black;
+  margin-bottom: 0.75em;
+  width: 500px;
 }
 
 .name, .email {
-	border: 3px solid white;
 	padding: 5px;
 	font-family: Tahoma, sans-serif;
-  width: 600px;
-  border-radius: 2px;
-
+  border-radius: 4px;
+  text-align: inherit;
+  border: 1px solid black;
+  margin-bottom: 0.75em;
+  width: 500px;
 }
 
 button {
   width: 20%;
-  padding: 5px;
-  margin-left: 35%;
+  padding: 1em;
+  /* margin-left: 35%;
   margin-right: 35%;
   margin-top: 30px;
-  margin-bottom: 50px;
-  display: flex;
+  margin-bottom: 50px; */
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+  margin-top: 1em;
+}  /* display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   align-items: center;
-}
+} */
 
-.alignContent.flex {
+.alignContent, .flex {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  align-content: center;
+  max-width: 600px;
+  min-width: 200px;
 }
 
 
-.alignContent div {
+/* .alignContent div {
   text-align: center;
   margin: .25rem;
   padding: .25rem;
-
-}
+} */
 
 .alignEverything {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-
+  padding: 0.5em;
 }
 
 .textContainer {
@@ -245,7 +255,8 @@ footer img {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1100px;
+  min-width: 250px;
   position: relative;
   margin: auto;
 }
@@ -253,6 +264,14 @@ footer img {
 /* Hide the images by default */
 .mySlides {
   display: none;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.mySlides img {
+  width: auto;
+  height: 800px;
+  /* object-fit: cover; */
 }
 
 /* Next & previous buttons */
@@ -345,4 +364,12 @@ footer img {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}100%
+
+
+@media (min-width: 500px) {
+  .message, .name, .email, button {
+    width: 100%;
+  }
+
 }

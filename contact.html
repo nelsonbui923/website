@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <div class="navbar">
       <ul class="navigation"> <!-- nav bar -->
         <li class="navHome"><a href=#home>Home</a></li>
@@ -11,7 +12,6 @@
 
     <link rel="stylesheet" href="mycss.css">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Me</title>
   </head>
   <body>
@@ -20,34 +20,23 @@
       <h2>Leave a message after the submit button!</h2>
     </section>
 <div class="alignEverything">
-    <section>
+    <!-- <section>
       <h6>Name: </h6>
       <h6>Email: </h6>
       <h6>Message: </h6>
-    </section>
+    </section> -->
 
+    <div class="alignContent flex">
+      <form name="contactForm" onsubmit="submitMe()">
+          <input type="text" class="name" id="inputName" name="name" placeholder="Your name here.." required />
 
+          <input type="email" class="email" id="inputEmail" name="email" placeholder="Your email here.." required />
 
-    <section class="alignContent flex">
-    <form name="contactForm" onsubmit="submitMe()">
-
-        <div>
-          <textarea class="name" id="inputName" name="name" placeholder="Your name here.." rows="1" cols="20" required></textarea>
-        </div>
-
-          <div>
-          <textarea class="email" id="inputEmail" name="email" placeholder="Your email here.." rows="1" cols="20" required></textarea>
-        </div>
-
-        <div>
           <textarea class="message" id="inputMessage" name="message" wrap="off" placeholder="Leave your message!" rows="10" cols="20" required></textarea>
-        </div>
-        <button type="submit" >Submit</button>
-
-    </form>
+        <button class="btn btn-primary" type="submit" >Submit</button>
+      </form>
     </div>
-  </section>
+  </div>
 
   </body>
-
 </html>
