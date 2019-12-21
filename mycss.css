@@ -132,7 +132,7 @@ h6 {
 
 .message {
 	padding: 5px;
-	font-family: Tahoma, sans-serif;
+	font-family: Helvetica, sans-serif;
   border-radius: 4px;
   text-align: center;
   border: 1px solid black;
@@ -143,7 +143,7 @@ h6 {
 
 .name, .email {
 	padding: 5px;
-	font-family: Tahoma, sans-serif;
+	font-family: Helvetica, sans-serif;
   border-radius: 4px;
   text-align: center;
   border: 1px solid black;
