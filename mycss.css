@@ -226,12 +226,13 @@ button {
 
 .preview {
   color: white;
-  margin: auto;
+  margin: 20px;
   text-align: center;
   font-size: 30px;
   font-family: Helvetica, sans-serif;
   font-style: italic;
   font-stretch: semi-expanded;
+
 
 
 }
