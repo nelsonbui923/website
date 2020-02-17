@@ -1,42 +1,86 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div class="navbar">
-      <ul class="navigation"> <!-- nav bar -->
-        <li class="navHome"><a href=#home>Home</a></li>
-        <li class="navContact"><a href="#contact">Contact</a></li>
-        <li class="navPortfolio"><a href="#portfolio">Portfolio</a></li>
-      </ul>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1ff089575c.js" crossorigin="anonymous"></script>
+    <title>Leave a message!</title>
+</head>
+<body>
+    <nav id="main" class="navBar">
+        <button class="navButton" aria-expanded="false" aria-controls="nav-list">
+            <span class="open">☰</span>
+            <span class="close">×</span>
+            Menu
+          </button>
+        <ul id="nav-list">
+            <li class="logo" onclick="redirectBlackjack()"><i class="fas fa-infinity"></i><a href="#">NB.</a></li>
+            <li class="navHome" onclick="redirectHome()"><a href="#home"> Home </a></li>
+            <li class="link" onclick="redirectAboutMe()"><a href="#aboutme"> About Me </a></li>
+            <li class="navContact" onclick="redirectContact()"><a href="#contact">Contact Me</a></li>
+            <li class="navPortfolio" onclick="redirectPortfolio()"><a href="#portfolio"> Portfolio </a></li>
+        </ul>
+    </nav>
+
+    <div class="form-flex">
+        <h1>Get to know me more!</h1>
+        <form autocomplete="off">
+            <label for="name">Enter your Name:</label>
+            <input class="inputFields" type="text" name="name" id="firstname" placeholder="Your full name.."required><br>
+            <label for="email">Enter your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email.." required><br>
+            <label for="message">Message:</label>
+            <textarea class="inputFields inputMessage" placeholder="Message belongs here.." type="text" name="message" id="message" wrap="hard" required></textarea><br>
+        </form>
+        <button type="submit" class="contactButton">Submit</button>
+    </div>
+    <div class="modal-outer">
+        <div class="modal-inner">
+            <div class="card">
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201908/Bart_Simpson_sorry_mea_culpa-770x433.jpeg?mmNbSsaJzTN4G6WjMrsX7mpPFa_SoQIP"/>
+            </div>
+            <p>Sorry this functionality has been paused for the moment.</p>
+        </div>
     </div>
 
-    <link rel="stylesheet" href="mycss.css">
-    <meta charset="utf-8">
-    <title>Contact Me</title>
-  </head>
-  <body>
-    <script src="script.js" async></script>
-    <section>
-      <h2>Leave a message after the submit button!</h2>
-    </section>
-<div class="alignEverything">
-    <!-- <section>
-      <h6>Name: </h6>
-      <h6>Email: </h6>
-      <h6>Message: </h6>
-    </section> -->
-
-    <div class="alignContent flex">
-      <form name="contactForm" onsubmit="submitMe()">
-          <input type="text" class="name" id="inputName" name="name" placeholder="Your name here.." required />
-
-          <input type="email" class="email" id="inputEmail" name="email" placeholder="Your email here.." required />
-
-          <textarea class="message" id="inputMessage" name="message" wrap="off" placeholder="Leave your message!" rows="10" cols="20" required></textarea>
-        <button class="btn btn-primary" type="submit" >Submit</button>
-      </form>
+    <div class="social">
+        <h4>Feel free to check out my social media!</h4>
     </div>
-  </div>
+    <div class="imgContainer">
+        <a href="https://www.instagram.com/the_real_nelsonbui/"><img class="instagram socialImg" src="./images/instagram logo.jpg" /></a>
+        <a href="https://www.linkedin.com/in/nelson-bui/"><img class="linkedin socialImg" src="./images/linkedin logo.png"/></a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+    
+    const submitButton = document.querySelector('.contactButton');
+    const modalOuter = document.querySelector('.modal-outer');
+    const modalInner = document.querySelector('.modal-inner');
 
-  </body>
+    function handleSubmit() {
+        modalOuter.classList.add('open');
+    }
+
+    function closeModal() {
+        modalOuter.classList.remove('open');
+    }
+
+    modalOuter.addEventListener('click', function(event) {
+        const isOutside = !event.target.closest('.modal-inner');
+        if (isOutside) {
+            closeModal();
+    }});
+
+    window.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+        closeModal();
+        }
+    });
+    
+    
+    submitButton.addEventListener('click', handleSubmit);
+
+    </script>
+</body>
 </html>

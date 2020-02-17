@@ -1,46 +1,148 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr" >
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div class="navbar">
-    <ul class="navigation"> <!-- nav bar -->
-      <li class="navHome"><a href=#home>Home</a></li>
-      <li class="navContact"><a href="#contact">Contact</a></li>
-      <li class="navPortfolio"><a href="#portfolio">Portfolio</a></li>
-    </ul>
-  </div>
-
-  <link rel="stylesheet" href="mycss.css">
-  <meta charset="utf-8">
-  <!-- url name -->
-  <title>
-    Nelson Bui
-  </title>
-  <img style="width: 100%" onclick="clickImage()"id="selfie" src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/s960x960/79263664_2550614018309492_7361371308786974720_o.jpg?_nc_cat=111&_nc_ohc=uoUiwQ8J0wEAQlq2KH8P_v_CsldwNJHRBOe9LSel3wERHFsYiXUZbQLgA&_nc_ht=scontent-lax3-2.xx&oh=9a763ed890b252e4d61396495900fe55&oe=5E6E4CB2" title="Hi :)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Nelson Bui</title>
+    <script src="https://kit.fontawesome.com/1ff089575c.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <script src="script.js" async></script>
-<section> <!-- only words in webpage? -->
-  <h4 id="intro">My name is Nelson Bui. An aspiring Web Developer located in Los Angeles.</h4>
-  <p id="quote">"My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style." -Maya Angelou</p>
+<body> 
+    <nav id="main" class="navBar">
+        <button class="navButton" aria-expanded="false" aria-controls="nav-list">
+            <span class="open">☰</span>
+            <span class="close">×</span>
+            Menu
+          </button>
+        <ul id="nav-list">
+            <li class="logo" onclick="redirectBlackjack()"><i class="fas fa-infinity"></i><a href="#">NB.</a></li>
+            <li class="navHome" onclick="redirectHome()"><a href="#home"> Home </a></li>
+            <li class="link" onclick="redirectAboutMe()"><a href="#aboutme"> About Me </a></li>
+            <li class="navContact" onclick="redirectContact()"><a href="#contact">Contact Me</a></li>
+            <li class="navPortfolio"><a href="#portfolio"> Portfolio </a></li>
+        </ul>
+    </nav>
+    
+    <h3>Welcome! Enjoy your stay.</h3>
+    
+    <div class="grid-container">
 
-</section>
+        <div class="intro-container">
+            <img src="./images/DSC_0152.jpg"/>
+            <p>
+                My name is Nelson Bui.
+                An aspiring Web Developer located in Los Angeles.
+            </p>
+        </div>
+        <div class="info">
+            <h4>"My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style." -Maya Angelou</h4>
+        </div>
+        <div class="skills">
+            <h2>Skill Set</h2>
+            <img class="item item1" src="./images/HTML LOGO.png" alt="HTML"title="HTML"/>
+            <img class="item item2" src="./images/CSS LOGO.png" alt="CSS"title="CSS"/>
+            <img class="item item3" src="./images/JAVASCRIPT LOGO.png" alt="JavaScript" title="JavaScript"/>
+            <img class="item item4" src="./images/REACT LOGO.jpg"alt="React" title="React"/>
+            <img class="item item5" src="./images/NODE LOGO.png" alt="Node.js"title="Node.js"/>
+            <img class="item item6" src="./images/BOOTSTRAP LOGO.png" alt="Bootstrap"title="Bootstrap"/>
+            <img class="item item7" src="./images/GIT LOGO.png" alt="Git" title="Git"/>
+            <img class="item item8" src="./images/JSON LOGO.jpg" alt="JSON"title="JSON"/>
+            <!-- <img class="item item9" src="./images/PYTHON LOGO.png" alt="Python" title="Python"/> -->
+        </div>
+        <div class="git">
+            <p><strong>GitHub</strong>: You can access my GitHub here-</p>
+            <a href="https://github.com/nelsonbui923"><img src="./images/git-icon.png"/></a>
+        </div>    
+        <div id="portfolio" class="slider">
+            <h1>Projects</h1>
+            <div class="slides">
+                <div class="slide">
+                    <img src="./images/WPM picture.jpg" />
+                    <div class="slide-caption"><p>Words per minute calculator.</p></div>
+                </div>
+                <div class="slide">
+                    <img src="./images/todolist picture (2).jpg"/>
+                    <div class="slide-caption"><p>Complete functional todo list tracker in React.</p></div>
+                </div>
+                <div class="slide">
+                    <img src="./images/MICROSOFT1.png" />
+                    <div class="slide-caption"><p>Microsoft website clone with media queries.</p></div>
+                </div>
+                <div class="slide">
+                    <img src="./images/NETFLIX1.jpg" />
+                    <div class="slide-caption"><p>Netflix website clone with media queries.</p></div>
+                </div>
+                <div class="slide">
+                    <img src="./images/blackjack.png" />
+                    <div class="slide-caption"><p>Fully functional Blackjack game with score keeping.</p></div>
+                </div>
+                <div class="slide">
+                    <img src="./images/to be continued.jpg" />
+                    <div class="slide-caption"><p>A lot more projects on the way! For the mean time, try clicking the logo!</p></div>
+                </div>   
+            </div>
+            <div class="controls">
+                <button class="goToPrev">&#171;</button>
+                <button class="goToNext">&#187;</button>
+            </div>
+        </div>
+        <div class="resume">
+            <p><strong>Resume</strong>: You can access my Resume here-</p>
+            <a href="https://www.dropbox.com/s/l0fv38gcjrdy0y4/Resume.cs.pdf?dl=0"><img src="./images/resume-icon.png"/></a>
+        </div>    
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // SLIDER / CAROUSEL
+const mySlider = Slider(document.querySelector('.slider'));
 
-<section id="skillset">
-  <div class="skillTitle">
-    <h5>Skill Set<h5>
-  </div>
-  <div class="skillsArea">
-    <img src="https://cdn.freebiesupply.com/logos/large/2x/html-5-logo-png-transparent.png" alt="HTML" title="HTML"/>
-    <img src="https://cdn.freebiesupply.com/logos/large/2x/css-3-logo-png-transparent.png" alt="CSS" title="CSS"/>
-    <img src="https://i.imgur.com/37FddrP.png" alt="JavaScript" title="JavaScript"/>
-    <img src="https://i.imgur.com/pOzkbQi.png" alt="React" title="React"/>
-    <img src="http://pluspng.com/img-png/nodejs-logo-png-node-js-development-296.png" alt="Node.js" title="Node.js"/>
-    <img src="http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png" alt="Bootstrap" title="Bootstrap"/>
-    <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git" title="Git"/>
-    <img src="https://www.panayiotisgeorgiou.net/wp-content/uploads/2015/03/json.png" alt="JSON" title="JSON"/>
-  </div>
-</section>
+function Slider(slider) {
+    if (!(slider instanceof Element)) {
+        throw new Error('No Slider Selected');
+    }
+    // create some variables for working with the sliders
+    
+    let prev;
+    let current;
+    let next;
 
+    const slides = slider.querySelector('.slides');
+    const prevButton = slider.querySelector('.goToPrev');
+    const nextButton = slider.querySelector('.goToNext');
+
+    function startSlider() {
+        current = slider.querySelector('.current') || slides.firstElementChild;
+        prev = current.previousElementSibling || slides.lastElementChild;
+        next = current.nextElementSibling || slides.firstElementChild;
+    }
+
+    function applyClasses() {
+        current.classList.add('current');
+        prev.classList.add('prev');
+        next.classList.add('next');
+    }
+    function move(direction) {
+        // taking classes off of current slide
+        const classToRemove = ['prev', 'current', 'next'];
+        prev.classList.remove(...classToRemove);
+        current.classList.remove(...classToRemove);
+        next.classList.remove(...classToRemove);
+        if(direction === 'back') {
+            // new array of new value and destructure into new variables
+            [prev, current, next] = [prev.previousElementSibling || slides.lastElementChild, prev, current];
+        } else {
+            [prev, current, next] = [current, next, next.nextElementSibling || slides.firstElementChild];
+        }
+        applyClasses();
+    }
+
+    startSlider();
+    applyClasses();
+    
+    // event listeners
+    prevButton.addEventListener('click', () => move('back'));
+    nextButton.addEventListener('click', move);
+}
+    </script>
 </body>
 </html>
