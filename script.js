@@ -8,7 +8,7 @@ const nav = document.querySelector('#main');
 // const modalOuter = document.querySelector('.modal-outer');
 // const modalInner = document.querySelector('.modal-inner');
 const sliderImages = document.querySelectorAll('.slide-in');
-let topOfNav = nav.offsetTop;
+
 
 navButton.addEventListener('click', toggleNav);
 window.addEventListener('scroll', fixNav);
@@ -35,7 +35,7 @@ function redirectBlackjack() {
 }
 
 // // NAV BAR
-
+let topOfNav = nav.offsetTop;
 function fixNav() {
   if (window.scrollY >= topOfNav) {
     document.body.style.paddingTop = nav.offsetHeight + 'px';

@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
 
-html {
-  background: url("https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80");
-  background-size: cover;
-  background-repeat: no-repeat; 
-}
+html { background-color: rgb(26, 25, 25); z-index: 1;}
 
 body {
   font-family: Montserrat, sans-serif;
@@ -89,14 +85,15 @@ nav button {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-  "intro intro intro info"
-  "skills skills skills skills"
-  "git slider slider resume";
+  "skills skills"
+  "git resume"
+  "info info"
+  "slider slider ";
   grid-gap: 2em;
-  /* grid-auto-flow: dense; */
+  grid-auto-flow: dense;
+  background: azure;
 }
 
 h3 {
@@ -104,33 +101,27 @@ h3 {
   /* font-family: Montserrat, sans-serif; */
   font-size: 3em;
   text-align: center;
-  color: cornsilk;
+  color: black;
   font-style: oblique;
-  border-top: 3px double cornsilk;
-  border-bottom: 3px double cornsilk;
-  padding: 0.8em;
 }
 
 .intro-container {
-  grid-area: intro;
-  align-content: center;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  padding: 3em 0;
+  background: url(https://cache.marriott.com/marriottassets/destinations/hero/oceanside-ca-destination.jpg?interpolation=progressive-bilinear) center center/cover;
+  height: 100vh;
 }
-.intro-container img {
-  border: 1px solid black;
-  border-radius: 20%;
-  width: 100%;
-  max-width: 400px;
-  height: 500px;
-  transition: ease-in 0.8s; 
-}
+
 .intro-container p {
   font-size: 1.5em;
   font-weight: 700;
   letter-spacing: 0.8px;
-  color: cornsilk;
+  color: azure;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(50px) translateY(720px);
 }
 
 /* .intro-container img:hover {
@@ -141,33 +132,23 @@ h3 {
 
 .info {
   grid-area: info;
-  color: cornsilk;
+  color: black;
   font-size: 1.2em;
   font-style: italic;
-  border-left: 4px solid cornsilk;
   letter-spacing: 1.2px;
-  padding-left: 10px;
+  padding: 10px;
   text-align: center;
   justify-self: center;
   align-self: center;
-}
-
-.info:hover {
-  text-shadow: 0 0 2px azure;
-  border-left: 4px solid black;
-  font-size: 1.5em;
-  text-decoration: double;
-  
+  padding: 20px;
 }
 
 .skills {
   grid-area: skills;
   align-self: center;
   justify-self: center;
-  border-top: 3px groove cornsilk;
-  border-bottom: 3px groove cornsilk;
-  padding-bottom: 2em;
   text-align: center;
+  padding: 20px 0 30px 0;
 }
 .skills h2 {
   text-align: center;
@@ -180,13 +161,6 @@ h3 {
   grid-template-columns: repeat(9, 1fr); 
   grid-template-rows: 1fr; */
 }
-.skills img:hover {
-  /* border: 2px solid azure; */
-  box-shadow: 0 0 15px azure;
-  /* text-shadow: 0 0 5px azure; */
-  transform: scale(1.4);
-}
-
 
 .item {
   width: 4.8rem;
@@ -196,13 +170,13 @@ h3 {
 
 .slider {
   grid-area: slider;
-  padding-top: 2em;
+  padding: 10px;
 }
 
 .slider h1 {
   text-align: center;
   font-size: 3em;
-  text-shadow: 1px 1px 2px azure;
+  margin: 0 auto;
 }
 
 .slides {
@@ -213,7 +187,7 @@ h3 {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .slide {
@@ -253,7 +227,7 @@ h3 {
 .slide-caption {
   text-align: center;
   /* font-size: 1.5rem; */
-  color: cornsilk;
+  color: black;
   font-style: italic;
 }
 
@@ -262,12 +236,13 @@ h3 {
   grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
   gap: 1rem;
   justify-content: center;
-  padding: 1rem;
+  align-items: center;
+  text-align: center;
 }
 
 .controls button {
-  background: none;
-  border: 2px solid cornsilk;
+  background: white;
+  border: 1px solid black;
   font-size: 1.5rem;
   border-radius: 40px;
 }
@@ -320,19 +295,18 @@ h3 {
 .form-flex {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 0 0 20px 0;
   text-align: center;
   align-items: center;
 }
 
 .form-flex h1 {
   text-align: center;
-  text-shadow: 0 0 2px cornsilk;
   font-size: 3rem;
   letter-spacing: .2rem;
 }
 .form-flex label {
-  color: cornsilk;
+  color: black;
   font-size: 1.5rem;
 }
 .form-flex input {
@@ -357,12 +331,12 @@ h3 {
 
 .contactButton {
   background: none;
-  border: 2px solid cornsilk;
+  border: 2px solid black;
   font-size: 1.5rem;
   border-radius: 40px;
   width: 100%;
   max-width: 200px;
-  color: cornsilk;
+  color: black;
   display: block;
   padding:5px;
   text-align: center;
@@ -372,8 +346,6 @@ h3 {
 
 .contactButton:hover {
   transform: scale(1.2);
-  background: white;
-  color: black;
   cursor: pointer;
 }
 
@@ -382,7 +354,7 @@ h3 {
 }
 .socialImg {
   width: 100%;
-  max-width: 120px;
+  max-width: 100px;
   padding: 0 40px;
 }
 .socialImg:hover {
@@ -403,18 +375,22 @@ h3 {
   grid-gap: 20px;
   align-items: center;
   font-size: 2.2em;
-  text-shadow: 0 0 2px cornsilk;
 }
 
 .social h4:before, .social h4:after {
   display: block;
   content: '';
-  height: 15px;
-  background: linear-gradient(to var(--direction, left), azure, transparent);
+  height: 5px;
+  background: linear-gradient(to var(--direction, left), black, transparent);
 }
 
 .social h4:after {
   --direction: right;
+}
+
+.contactWrapper {
+  height: 100vh;
+  background: azure;
 }
 
 .modal-outer {
@@ -463,15 +439,21 @@ h3 {
 .about-wrap {
   max-width: 700px;
   margin: 100px auto;
-  background: white;
   padding: 40px;
   text-align: justify;
+  background: azure;
 }
 
 .about-wrap img {
   width: 100%;
   max-width: 175px;
   height: 120px;
+}
+
+.about-wrap img.solo {
+  display: block;
+  height: 200px;
+  margin: 0 auto;
 }
 
 .left-align {
@@ -529,18 +511,7 @@ h3 {
     grid-gap: 2em;
     /* grid-auto-flow: dense; */
   }
-  .info {
-    grid-area: info;
-    color: cornsilk;
-    font-size: 1.2em;
-    font-style: italic;
-    /* border-left: 4px solid cornsilk; */
-    /* letter-spacing: 1.2px; */
-    /* padding-left: 10px; */
-    text-align: center;
-    justify-self: center;
-    align-self: center;
-  }
+
 }
 @media (max-width: 600px) {
   .logo {
@@ -608,11 +579,14 @@ h3 {
   }
 
   nav button {
-    color: cornsilk;
+    color: black;
     background: none;
-    border: 2px solid cornsilk;
     font-size: 2rem;
-    /* border-radius: 30px; */
+    border: none;
+  }
+
+  nav a {
+    color: black;
   }
   body.fixed-nav nav {
     position: relative;
@@ -629,7 +603,6 @@ h3 {
     display: grid;
     align-items: center;
     font-size: 2.2em;
-    text-shadow: 0 0 2px cornsilk;
   }
 
   .socialImg {
