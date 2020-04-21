@@ -23,18 +23,20 @@
         </ul>
     </nav>
 <section class="contactWrapper">
-    <div class="form-flex">
-        <h1>Get to know me more!</h1>
-        <form autocomplete="off">
-            <label for="name">Enter your Name:</label>
-            <input class="inputFields" type="text" name="name" id="firstname" placeholder="Your full name.."required><br>
-            <label for="email">Enter your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email.." required><br>
-            <label for="message">Message:</label>
-            <textarea class="inputFields inputMessage" placeholder="Message belongs here.." type="text" name="message" id="message" wrap="hard" required></textarea><br>
-        </form>
-        <button type="submit" class="contactButton">Submit</button>
+    <h1>Get to know me more!</h1>
+    <div class="form-flex-1">
+        <input type="text" name="name" id="firstname" autocomplete="off" required>
+        <label for="name" class="label-name"><span class="content-name">Enter your Name</span></label>
     </div>
+    <div class="form-flex-2">
+        <input type="email" id="email" name="email" placeholder=" " autocomplete="off" required>
+        <label for="email" class="label-name"><span class="content-name">Enter your Email</span></label>
+    </div>
+    <div class="form-flex-3">
+        <textarea class="inputFields inputMessage" placeholder="Message belongs here.." type="text" name="message" id="message" wrap="hard" autocomplete="off" required></textarea>
+        <!-- <label for="message" class="label-name"><span class="content-name">Message:</span></label> -->
+    </div>
+    <button type="submit" class="contactButton">Submit</button>
     <div class="modal-outer">
         <div class="modal-inner">
             <div class="card">
@@ -43,15 +45,14 @@
             <p>Sorry this functionality has been paused for the moment.</p>
         </div>
     </div>
-
-    <div class="social">
-        <h4>Feel free to check out my social media!</h4>
-    </div>
-    <div class="imgContainer">
-        <a href="https://www.instagram.com/the_real_nelsonbui/"><img class="instagram socialImg" src="./images/instagram logo.jpg" /></a>
-        <a href="https://www.linkedin.com/in/nelson-bui/"><img class="linkedin socialImg" src="./images/linkedin logo.png"/></a>
-    </div>
 </section>
+<footer class="footer">
+        <h2><i class="fas fa-infinity"></i> NB.</h2>
+        <div class="imgContainer">
+            <img onclick="handleInsta()" class="instagram socialImg" src="./images/instagram logo.jpg" />
+            <img onclick="handleLinkedin()" class="linkedin socialImg" src="./images/linkedin logo.png"/>
+        </div>
+</footer>
     <script src="script.js"></script>
     <script>
     

@@ -4,10 +4,13 @@ const homeLink = document.querySelector(".navHome");
 const portfolioLink = document.querySelector(".navPortfolio");
 const navButton = document.querySelector('button[aria-expanded]');
 const nav = document.querySelector('#main');
+// const resume = document.querySelector('.resumeImg');
+// const git = document.querySelector('.gitImg');
 // const submitButton = document.querySelector('.contactButton');
 // const modalOuter = document.querySelector('.modal-outer');
 // const modalInner = document.querySelector('.modal-inner');
 const sliderImages = document.querySelectorAll('.slide-in');
+let topOfNav = nav.offsetTop;
 
 
 navButton.addEventListener('click', toggleNav);
@@ -31,11 +34,37 @@ function redirectAboutMe() {
 }
 
 function redirectBlackjack() {
-  window.location.href = "https://nelson-blackjack.netlify.com/"
+  window.open("https://nelson-blackjack.netlify.com/", "_blank")
 }
 
+function redirectCovid() {
+  window.open("https://nelsonbui-covid19.netlify.app/", "_blank")
+}
+
+function redirectKaraoke() {
+  window.open("https://karaokefun.netlify.com/", "_blank")
+}
+
+function redirectDigimon() {
+  window.open("https://digimonfinder.netlify.com/", "_blank")
+}
+
+function handleResume() {
+  window.open("https://www.dropbox.com/s/j8muxiu373pzyox/Resume.cs%20%28updated%204-21%29.pdf?dl=0", "_blank");
+}
+
+function handleGit() {
+  window.open("https://github.com/nelsonbui923", "_blank");
+}
+
+function handleInsta() {
+  window.open("https://www.instagram.com/the_real_nelsonbui/", "_blank");
+}
+
+function handleLinkedin() {
+  window.open("https://www.linkedin.com/in/nelson-bui/"), "_blank"
+}
 // // NAV BAR
-let topOfNav = nav.offsetTop;
 function fixNav() {
   if (window.scrollY >= topOfNav) {
     document.body.style.paddingTop = nav.offsetHeight + 'px';
@@ -88,9 +117,9 @@ function checkSlide() {
         sliderImage.classList.add('active');
       } else {
         sliderImage.classList.remove('active');
-      }
-    });
     }
+  });
+}
 
 // function handleSubmit() {
 //   modalOuter.classList.add('open');

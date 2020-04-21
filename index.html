@@ -28,11 +28,9 @@
             My name is Nelson Bui.
             An aspiring Web Developer located in Los Angeles.
         </p>
+        <h4 class="info">"My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style." -Maya Angelou</h4>
     </div>
     <div class="grid-container">
-        <div class="info">
-            <h4>"My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style." -Maya Angelou</h4>
-        </div>
         <div class="skills">
             <h2>Skill Set</h2>
             <img class="item item1" src="./images/HTML LOGO.png" alt="HTML"title="HTML"/>
@@ -43,39 +41,59 @@
             <img class="item item6" src="./images/BOOTSTRAP LOGO.png" alt="Bootstrap"title="Bootstrap"/>
             <img class="item item7" src="./images/GIT LOGO.png" alt="Git" title="Git"/>
             <img class="item item8" src="./images/JSON LOGO.jpg" alt="JSON"title="JSON"/>
-            <!-- <img class="item item9" src="./images/PYTHON LOGO.png" alt="Python" title="Python"/> -->
+            <img class="item item9" src="./images/PYTHON LOGO.png" alt="Python" title="Python"/>
         </div>
         <div class="git">
             <p><strong>GitHub</strong>: You can access my GitHub here-</p>
-            <a href="https://github.com/nelsonbui923"><img src="./images/git-icon.png"/></a>
+            <img onclick="handleGit()" src="./images/git-icon.png" />
         </div>    
         <div id="portfolio" class="slider">
             <h1>Projects</h1>
             <div class="slides">
                 <div class="slide">
-                    <div class="slide-caption"><p>Words per minute calculator.</p></div>
+                    <div class="slide-caption">Words per minute calculator.</div>
                     <img src="./images/WPM picture.jpg" />
                 </div>
                 <div class="slide">
-                    <div class="slide-caption"><p>Complete functional todo list tracker in React.</p></div>
+                    <div class="slide-caption">Complete functional todo list tracker in React.</div>
                     <img src="./images/todolist picture (2).jpg"/>
                 </div>
                 <div class="slide">
-                    <div class="slide-caption"><p>Microsoft website clone with media queries.</p></div>
+                    <div class="slide-caption">Microsoft website clone with media queries.</div>
                     <img src="./images/MICROSOFT1.png" />
                 </div>
                 <div class="slide">
-                    <div class="slide-caption"><p>Netflix website clone with media queries.</p></div>
+                    <div class="slide-caption">Netflix website clone with media queries.</div>
                     <img src="./images/NETFLIX1.jpg" />
                 </div>
                 <div class="slide">
-                    <div class="slide-caption"><p>Fully functional Blackjack game with score keeping.</p></div>
+                    <div class="slide-caption">Fully functional Blackjack game with score keeping.
+                        <p><span onclick="redirectBlackjack()">Have some fun with blackjack here!</span></p>
+                    </div>
                     <img src="./images/blackjack.png" />
                 </div>
                 <div class="slide">
-                    <div class="slide-caption"><p>A lot more projects on the way! For the mean time, try clicking the logo!</p></div>
+                    <div class="slide-caption">Currently working on a functional Karaoke website which allows users to express themselves through music.
+                        <p><span onclick="redirectKaraoke()">Check out how the project is going.</span></p>
+                    </div>
+                    <img src="./images/karaoke.PNG" />
+                </div>
+                <div class="slide">
+                    <div class="slide-caption">Short and fun Digimon Questionnaire to find your partner in crime.
+                        <p><span onclick="redirectDigimon()">Looking for a digimon partner?</span></p>
+                    </div>
+                    <img src="./images/digimonwebsite.jpg" />
+                </div>
+                <div class="slide">
+                    <div class="slide-caption">COVID-19 Tracker with daily updated information all in React (With charts).
+                        <p><span onclick="redirectCovid()">Latest data on COVID-19 here!</span></p>
+                    </div>
+                    <img src="./images/covidtracker.png" />
+                </div>
+                <div class="slide">
+                    <div class="slide-caption">A lot more projects on the way! For the mean time, try clicking the logo!</div>
                     <img src="./images/to be continued.jpg" />
-                </div>   
+                </div>       
             </div>
             <div class="controls">
                 <button class="goToPrev">&#171;</button>
@@ -84,9 +102,16 @@
         </div>
         <div class="resume">
             <p><strong>Resume</strong>: You can access my Resume here-</p>
-            <a href="https://www.dropbox.com/s/l0fv38gcjrdy0y4/Resume.cs.pdf?dl=0"><img src="./images/resume-icon.png"/></a>
+            <img onclick="handleResume()" src="./images/resume-icon.png"/>
         </div>    
     </div>
+    <footer class="footer">
+        <h2><i class="fas fa-infinity"></i> NB.</h2>
+        <div class="imgContainer">
+            <img onclick="handleInsta()" class="instagram socialImg" src="./images/instagram logo.jpg" />
+            <img onclick="handleLinkedin()" class="linkedin socialImg" src="./images/linkedin logo.png"/>
+        </div>
+    </footer>
     <script src="script.js"></script>
     <script>
         // SLIDER / CAROUSEL

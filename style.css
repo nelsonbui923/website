@@ -88,29 +88,24 @@ nav button {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
   "skills skills"
-  "git resume"
-  "info info"
-  "slider slider ";
+  "slider slider"
+  "git resume";
   grid-gap: 2em;
   grid-auto-flow: dense;
   background: azure;
-}
-
-h3 {
-  display: block;
-  /* font-family: Montserrat, sans-serif; */
-  font-size: 3em;
-  text-align: center;
-  color: black;
-  font-style: oblique;
+  padding: 20px;
 }
 
 .intro-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
   background: url(https://cache.marriott.com/marriottassets/destinations/hero/oceanside-ca-destination.jpg?interpolation=progressive-bilinear) center center/cover;
   height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .intro-container p {
@@ -118,10 +113,8 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.8px;
   color: azure;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(50px) translateY(720px);
+  font-style: italic;
+  transform: translateY(200px);
 }
 
 /* .intro-container img:hover {
@@ -131,17 +124,18 @@ h3 {
 } */
 
 .info {
-  grid-area: info;
-  color: black;
-  font-size: 1.2em;
-  font-style: italic;
-  letter-spacing: 1.2px;
-  padding: 10px;
+  flex-wrap: wrap;
   text-align: center;
-  justify-self: center;
-  align-self: center;
-  padding: 20px;
+  justify-self: flex-start;
+  font-size: 0.9em;
+  font-style: italic;
+  color: azure;
+  max-width: 800px;
+  margin-bottom: 100px;
+  transform: translateY(200px);
+  margin-left: 50px;
 }
+
 
 .skills {
   grid-area: skills;
@@ -157,9 +151,6 @@ h3 {
 }
 .skills img {
   margin: 20px;
-  /* display: grid;
-  grid-template-columns: repeat(9, 1fr); 
-  grid-template-rows: 1fr; */
 }
 
 .item {
@@ -170,7 +161,7 @@ h3 {
 
 .slider {
   grid-area: slider;
-  padding: 10px;
+  padding-top: 70px;
 }
 
 .slider h1 {
@@ -229,6 +220,14 @@ h3 {
   /* font-size: 1.5rem; */
   color: black;
   font-style: italic;
+}
+
+.slide-caption p {
+  text-decoration: underline;
+}
+
+.slide-caption p span {
+  cursor: pointer;
 }
 
 .controls {
@@ -292,42 +291,136 @@ h3 {
 }
 
 /* CONTACT PAGE STYLING */
-.form-flex {
+.form-flex-1,
+.form-flex-2 {
   display: flex;
   flex-direction: column;
-  margin: 0 0 20px 0;
-  text-align: center;
+  justify-content: space-around;
   align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  height: 70px;
+  padding-bottom: 5px;
+  overflow: hidden;
 }
 
-.form-flex h1 {
+.form-flex-3 {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  height: 200px;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+ .form-flex-3 textarea {
+  resize:none;
+}
+
+.contactWrapper h1 {
   text-align: center;
   font-size: 3rem;
-  letter-spacing: .2rem;
+  margin: 0;
+  padding-top: 20px;
 }
-.form-flex label {
-  color: black;
-  font-size: 1.5rem;
-}
-.form-flex input {
+.form-flex-1 input,
+.form-flex-2 input {
   width: 100%;
-  padding: 5px;
-  justify-content: center;
-  align-content: center;
-  font-family: Montserrat, sans-serif;
+  padding-top: 50px;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
-}
-#message {
-  height: 200px;
-  display:flex;
-  /* word-wrap: break-word;
-  justify-content: start;
-  align-items: flex-start; */
-  width: 100%;
-  font-family: Montserrat, sans-serif;
-  font-size: 1rem;
+  border: none;
+  background: none;
+  margin: 0;
+  outline: none;
 }
 
+.form-flex-1 label, .form-flex-2 label {
+  position: absolute;
+  color: black;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  bottom: 0px;
+  left: 0%;
+  margin: 0;
+}
+
+.form-flex-3 label {
+  position: absolute;
+  color: black;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  bottom: 0px;
+  left: 0%;
+  margin: 0;
+}
+
+.form-flex-1 label::after, .form-flex-2 label::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  bottom: -1px;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-200%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.form-flex-1 input:focus + .label-name .content-name,
+.form-flex-1 input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+
+.form-flex-2 input:focus + .label-name .content-name,
+.form-flex-2 input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+
+.form-flex-1 input:focus + .label-name::after,
+.form-flex-1 input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.form-flex-2 input:focus + .label-name::after,
+.form-flex-2 input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+
+.inputMessage {
+  height: 200px;
+  display:flex;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  background: none;
+  border: 1px solid black;
+  outline: none;
+}
 
 .contactButton {
   background: none;
@@ -341,7 +434,7 @@ h3 {
   padding:5px;
   text-align: center;
   align-self: center;
-  margin: 5px 0;
+  margin: 10px auto;
 }
 
 .contactButton:hover {
@@ -354,8 +447,8 @@ h3 {
 }
 .socialImg {
   width: 100%;
-  max-width: 100px;
-  padding: 0 40px;
+  max-width: 50px;
+  padding: 0 20px;
 }
 .socialImg:hover {
   transform: scale(1.2);
@@ -421,8 +514,8 @@ h3 {
   border-radius: 5px;
   min-height: 200px;
   background: white;
-  transform: translateY(-200%);
-  transition: transform 2s;
+  opacity: 0;
+  transition: all 1s ease;
 }
 .modal-outer img {
   width: 100%;
@@ -432,13 +525,13 @@ h3 {
   pointer-events: all;
 }
 .modal-outer.open .modal-inner {
-  transform: translateY(0);
+  opacity: 1;
 }
 
 /* ABOUT ME PAGE STYLING */
 .about-wrap {
   max-width: 700px;
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 40px;
   text-align: justify;
   background: azure;
@@ -452,8 +545,9 @@ h3 {
 
 .about-wrap img.solo {
   display: block;
-  height: 200px;
+  height: 250px;
   margin: 0 auto;
+  width: 300px;
 }
 
 .left-align {
@@ -488,7 +582,19 @@ h3 {
   text-decoration: underline;
 } */
 .about-wrap p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+footer {
+  padding-bottom: 10px;
+  text-align: center;
+  background: rgba(32, 32, 32, 0.1);
+}
+
+footer h2 {
+  color: azure;
+
 }
 
 /* MEDIA QUERIES */
@@ -497,7 +603,10 @@ h3 {
   /* body {
     font-size: 1.2em;
   } */
-
+  .info {
+  text-align: center;
+  margin: 20px;
+  }
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -529,15 +638,18 @@ h3 {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "intro"
     "skills"
-    "info"
     "slider"
     "git"
     "resume";
     
     grid-gap: 2em;
     /* grid-auto-flow: dense; */
+  }
+
+  .info {
+    text-align: center;
+    margin: 20px;
   }
 
   nav {
@@ -579,14 +691,14 @@ h3 {
   }
 
   nav button {
-    color: black;
+    color: azure;
     background: none;
     font-size: 2rem;
     border: none;
   }
 
   nav a {
-    color: black;
+    color: azure;
   }
   body.fixed-nav nav {
     position: relative;
@@ -608,6 +720,17 @@ h3 {
   .socialImg {
     width: 100%;
     max-width: 100px;
+    padding: 10px;
+  }
+
+  .about-wrap p {
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .socialImg {
+    width: 100%;
+    max-width: 50px;
     padding: 10px;
   }
 }
