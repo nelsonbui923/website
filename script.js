@@ -40,6 +40,9 @@ function redirectBlackjack() {
 function redirectCovid() {
   window.open("https://nelsonbui-covid19.netlify.app/", "_blank")
 }
+function redirectSickFits() {
+  window.open("https://sickfits-nbui-react-prod.herokuapp.com/", "_blank")
+}
 
 function redirectKaraoke() {
   window.open("https://karaokefun.netlify.com/", "_blank")
@@ -50,7 +53,7 @@ function redirectDigimon() {
 }
 
 function handleResume() {
-  window.open("https://www.dropbox.com/s/j8muxiu373pzyox/Resume.cs%20%28updated%204-21%29.pdf?dl=0", "_blank");
+  window.open("https://www.dropbox.com/s/bwtkdcqc5ptz45s/Resume.cs%20%28updated%206-3%29.pdf?dl=0", "_blank");
 }
 
 function handleGit() {

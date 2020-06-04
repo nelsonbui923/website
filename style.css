@@ -194,6 +194,11 @@ nav button {
   transform: translateX(-200%);
 }
 
+.slide h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 .slide.next + .slide {
   transform: translateX(200%);
 }
