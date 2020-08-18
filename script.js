@@ -53,7 +53,7 @@ function redirectDigimon() {
 }
 
 function handleResume() {
-  window.open("https://www.dropbox.com/s/bwtkdcqc5ptz45s/Resume.cs%20%28updated%206-3%29.pdf?dl=0", "_blank");
+  window.open("https://www.dropbox.com/s/2kybe8oun5c4lri/Resume.cs%20updated%208.18.20.pdf?dl=0", "_blank");
 }
 
 function handleGit() {
